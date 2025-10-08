@@ -784,6 +784,10 @@ window.addEventListener("DOMContentLoaded", () => {
 document.querySelector("form").addEventListener("submit", function (e) {
   e.preventDefault();
   const form = this;
+  const submitBtn = form.querySelector('button[type="submit"]');
+  const originalBtnText = submitBtn.textContent;
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Submitting...';
 
   const StudentName = form.StudentName.value;
   const ParentName = form.ParentName.value;
@@ -831,5 +835,9 @@ document.querySelector("form").addEventListener("submit", function (e) {
     .catch((err) => {
       console.error("Error:", err);
       alert("Submission failed. Check console for details.");
+    })
+    .finally(() => {
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalBtnText;
     });
 });
