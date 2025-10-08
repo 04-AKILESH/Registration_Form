@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-11 col-md-10 col-lg-8">
+                <div class="img">
+                    <img src="images/maniyalogo.svg" alt="">
+                </div>
+                <div class="custom-form-container">
+                    <h1 class="mb-4">Student Registration Form</h1>
+                    <form>
+                        <div class="row">
+                            <div class="col-12 col-lg-6">
+                                <div class="mb-3">
+                                    <label for="StudentName" class="form-label">Student Name</label>
+                                    <input type="text" id="StudentName" name="StudentName" class="form-control"
+                                        required>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <div class="mb-3">
+                                    <label for="ParentName" class="form-label">Parent Name</label>
+                                    <input type="text" id="ParentName" name="ParentName" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <div class="mb-3">
+                                    <label for="StudentPhone" class="form-label">Student Phone Number</label>
+                                    <input type="tel" id="StudentPhone" name="StudentPhone" class="form-control"
+                                        pattern="[0-9]{10}" maxlength="10" required>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <div class="mb-3">
+                                    <label for="ParentPhone" class="form-label">Parent's Phone Number</label>
+                                    <input type="tel" id="ParentPhone" name="ParentPhone" class="form-control"
+                                        pattern="[0-9]{10}" maxlength="10" required>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <div class="mb-3">
+                                    <label for="Address" class="form-label">Address</label>
+                                    <textarea id="Address" name="Address" class="form-control" rows="2"
+                                        required></textarea>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <div class="mb-3">
+                                    <label for="City" class="form-label">City / Town / Village</label>
+                                    <input type="text" id="City" name="City" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <div class="mb-3">
+                                    <label for="State" class="form-label">State</label>
+                                    <select id="State" name="State" class="form-select" required
+                                        onchange="updateDistricts()">
+                                        <option value="">Select State</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <div class="mb-3">
+                                    <label for="District" class="form-label">District</label>
+                                    <select id="District" name="District" class="form-select" required>
+                                        <option value="">Select District</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <div class="mb-3">
+                                    <label for="PinCode" class="form-label">PIN Code</label>
+                                    <input type="text" id="PinCode" name="PinCode" class="form-control" pattern="[0-9]{6}"
+                                        maxlength="6" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-12 d-flex justify-content-center">
+                                <button type="submit" class="btn btn-warning px-3">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="contact-info mt-4">
+                    <p>Phone : +91 89038 54444, +91 89038 64444</p>
+                    <p>Email : admission@srimaniyainstitute.in</p>
+                    <p>Website : <a href="http://www.srimaniyainstitute.in" target="_blank" class="link">www.srimaniyainstitute.in</a></p>
+                    <p>Address : No: 6/66-D1, Government Hospital Road, Kanyakumari, Tamil Nadu – 629702.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

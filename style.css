@@ -1,0 +1,61 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");
+
+.container {
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+body {
+  background-image: url("images/hello.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(11, 36, 81, 0.6);
+  z-index: 0;
+  pointer-events: none;
+  backdrop-filter: blur(10px);
+}
+
+.container,
+.custom-form-container,
+form,
+.row,
+.col-12,
+.col-lg-6,
+.col-md-10,
+.col-lg-8 {
+  position: relative;
+  z-index: 1;
+}
+
+.img {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.img img {
+  width: 300px;
+  height: auto;
+}
+
+.link{
+    text-decoration: none;
+    color: white;
+}
+
+@media (min-width: 1024px) {
+  .img img {
+    width: 400px;
+  }
+}
