@@ -787,7 +787,7 @@ document.querySelector("form").addEventListener("submit", function (e) {
   const submitBtn = form.querySelector('button[type="submit"]');
   const originalBtnText = submitBtn.textContent;
   submitBtn.disabled = true;
-  submitBtn.textContent = 'Submitting...';
+  submitBtn.textContent = "Submitting...";
 
   const StudentName = form.StudentName.value;
   const ParentName = form.ParentName.value;
@@ -810,7 +810,7 @@ document.querySelector("form").addEventListener("submit", function (e) {
   console.log("PinCode:", PinCode);
 
   fetch(
-    "https://script.google.com/macros/s/AKfycbwHiKhpirvZSihnkenK2liT7AQzi1wrTiypu5J-BB0IQHK8ZECBYTHX1u-8DA6KUaDuOA/exec",
+    "https://script.google.com/macros/s/AKfycbxK4cqwi1vrMQYOOFUZ-ZIxiPkUSiPW-d8VE3NuoH8Kh2P-Y_RVnB8he0yC7mngfcj_/exec",
     {
       method: "POST",
       mode: "no-cors",
