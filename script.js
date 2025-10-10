@@ -1,3 +1,13 @@
+window.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector("form");
+  const clearBtn = document.getElementById("clearFormBtn");
+  if (form && clearBtn) {
+    clearBtn.addEventListener("click", () => {
+      form.reset();
+    });
+  }
+});
+
 const districts = {
   "Andhra Pradesh": [
     "Anantapur",
@@ -793,14 +803,29 @@ document.querySelector("form").addEventListener("submit", function (e) {
   const ParentName = form.ParentName.value;
   const StudentPhone = form.StudentPhone.value;
   const ParentPhone = form.ParentPhone.value;
+  let StudentEmail = form.StudentEmail.value;
+  if (!StudentEmail || StudentEmail == "") StudentEmail = "Nil";
   const Address = form.Address.value;
   const City = form.City.value;
   const State = form.State.value;
   const District = form.District.value;
   const PinCode = form.PinCode.value;
 
+  console.log(
+    StudentName,
+    ParentName,
+    StudentPhone,
+    ParentPhone,
+    StudentEmail,
+    Address,
+    City,
+    State,
+    District,
+    PinCode
+  );
+
   fetch(
-    "https://script.google.com/macros/s/AKfycbxK4cqwi1vrMQYOOFUZ-ZIxiPkUSiPW-d8VE3NuoH8Kh2P-Y_RVnB8he0yC7mngfcj_/exec",
+    "https://script.google.com/macros/s/AKfycbxQ0OGd2A5Tvs0_MQxcUWtWfwEmyAyHpdY6mcUXZKj87QXG0JP2ilZ9CTQxmhfkP6_r/exec",
     {
       method: "POST",
       mode: "no-cors",
@@ -810,6 +835,7 @@ document.querySelector("form").addEventListener("submit", function (e) {
         ParentName,
         StudentPhone,
         ParentPhone,
+        StudentEmail,
         Address,
         City,
         State,
@@ -822,15 +848,15 @@ document.querySelector("form").addEventListener("submit", function (e) {
       const isMobile = window.innerWidth <= 600;
       Swal.fire({
         toast: true,
-        position: isMobile ? 'top' : 'top-end',
-        icon: 'success',
-        title: 'Form submitted successfully!',
+        position: isMobile ? "top" : "top-end",
+        icon: "success",
+        title: "Form submitted successfully!",
         showConfirmButton: false,
         timer: 2500,
         timerProgressBar: true,
         customClass: {
-          popup: 'small-toast'
-        }
+          popup: "small-toast",
+        },
       });
       form.reset();
     })
@@ -839,16 +865,16 @@ document.querySelector("form").addEventListener("submit", function (e) {
       const isMobile = window.innerWidth <= 600;
       Swal.fire({
         toast: true,
-        position: isMobile ? 'top' : 'top-end',
-        icon: 'error',
-        title: 'Submission Failed',
-        text: 'Submission failed. Check console for details.',
+        position: isMobile ? "top" : "top-end",
+        icon: "error",
+        title: "Submission Failed",
+        text: "Submission failed. Check console for details.",
         showConfirmButton: false,
         timer: 2500,
         timerProgressBar: true,
         customClass: {
-          popup: 'small-toast'
-        }
+          popup: "small-toast",
+        },
       });
     })
     .finally(() => {

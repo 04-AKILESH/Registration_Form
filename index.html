@@ -13,86 +13,118 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-11 col-md-10 col-xl-8">
-                <div class="img">
+                <div class="img mb-5">
                     <img src="images/maniyalogo.svg" alt="">
                 </div>
                 <div class="custom-form-container">
-                    <h1 class="mb-4">Student Registration Form</h1>
+                    <h2 class="mb-4">Student Registration Form</h2>
                     <form>
                         <div class="row">
                             <div class="col-12 col-lg-6">
                                 <div class="mb-3">
-                                    <label for="StudentName" class="form-label">Student Name <span class="star-large mb-0">*</span></label>
-                                    <input type="text" id="StudentName" name="StudentName" class="form-control" required>
+                                    <label for="StudentName" class="form-label">Student Name <span
+                                            class="star-large mb-0">*</span></label>
+                                    <input type="text" id="StudentName" name="StudentName"
+                                        class="form-control underline-input" required>
                                 </div>
                             </div>
                             <div class="col-12 col-lg-6">
                                 <div class="mb-3">
-                                    <label for="ParentName" class="form-label">Parent Name <span class="star-large mb-0">*</span></label>
-                                    <input type="text" id="ParentName" name="ParentName" class="form-control" required>
+                                    <label for="ParentName" class="form-label">Parent Name <span
+                                            class="star-large mb-0">*</span></label>
+                                    <input type="text" id="ParentName" name="ParentName"
+                                        class="form-control underline-input" required>
                                 </div>
                             </div>
                             <div class="col-12 col-lg-6">
                                 <div class="mb-3">
-                                    <label for="StudentPhone" class="form-label">Student Phone Number <span class="star-large mb-0">*</span></label>
-                                    <input type="tel" id="StudentPhone" name="StudentPhone" class="form-control" pattern="[0-9]{10}" maxlength="10" required>
+                                    <label for="StudentPhone" class="form-label">Student Phone Number <span
+                                            class="star-large mb-0">*</span></label>
+                                    <input type="tel" id="StudentPhone" name="StudentPhone"
+                                        class="form-control underline-input" pattern="[0-9]{10}" maxlength="10"
+                                        required>
                                 </div>
                             </div>
                             <div class="col-12 col-lg-6">
                                 <div class="mb-3">
-                                    <label for="ParentPhone" class="form-label">Parent's Phone Number <span class="star-large mb-0">*</span></label>
-                                    <input type="tel" id="ParentPhone" name="ParentPhone" class="form-control" pattern="[0-9]{10}" maxlength="10" required>
+                                    <label for="ParentPhone" class="form-label">Parent's Phone Number <span
+                                            class="star-large mb-0">*</span></label>
+                                    <input type="tel" id="ParentPhone" name="ParentPhone"
+                                        class="form-control underline-input" pattern="[0-9]{10}" maxlength="10"
+                                        required>
                                 </div>
                             </div>
                             <div class="col-12 col-lg-6">
                                 <div class="mb-3">
-                                    <label for="Address" class="form-label">Address <span class="star-large mb-0">*</span></label>
-                                    <textarea id="Address" name="Address" class="form-control" rows="2" required></textarea>
+                                    <label for="StudentEmail" class="form-label mb-2">Student Email</label>
+                                    <input type="email" id="StudentEmail" name="StudentEmail"
+                                        class="form-control underline-input">
                                 </div>
                             </div>
                             <div class="col-12 col-lg-6">
                                 <div class="mb-3">
-                                    <label for="City" class="form-label">City / Town / Village <span class="star-large mb-0">*</span></label>
-                                    <input type="text" id="City" name="City" class="form-control" required>
+                                    <label for="Address" class="form-label">Address <span
+                                            class="star-large">*</span></label>
+                                    <textarea id="Address" name="Address" class="form-control underline-input" rows="2"
+                                        required></textarea>
                                 </div>
                             </div>
                             <div class="col-12 col-lg-6">
                                 <div class="mb-3">
-                                    <label for="State" class="form-label">State <span class="star-large mb-0">*</span></label>
-                                    <select id="State" name="State" class="form-select" required onchange="updateDistricts()">
+                                    <label for="City" class="form-label">City / Town / Village <span
+                                            class="star-large">*</span></label>
+                                    <input type="text" id="City" name="City" class="form-control underline-input"
+                                        required>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <div class="mb-3">
+                                    <label for="State" class="form-label">State <span
+                                            class="star-large">*</span></label>
+                                    <select id="State" name="State" class="form-select select-input" required
+                                        onchange="updateDistricts()">
                                         <option value="" disabled selected>Select State</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="col-12 col-lg-6">
                                 <div class="mb-3">
-                                    <label for="District" class="form-label">District <span class="star-large mb-0">*</span></label>
-                                    <select id="District" name="District" class="form-select" required>
+                                    <label for="District" class="form-label">District <span
+                                            class="star-large">*</span></label>
+                                    <select id="District" name="District" class="form-select select-input" required>
                                         <option value="" disabled selected>Select District</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="col-12 col-lg-6">
                                 <div class="mb-3">
-                                    <label for="PinCode" class="form-label">PIN Code <span class="star-large mb-0">*</span></label>
-                                    <input type="text" id="PinCode" name="PinCode" class="form-control" pattern="[0-9]{6}" maxlength="6" required>
+                                    <label for="PinCode" class="form-label">PIN Code <span
+                                            class="star-large">*</span></label>
+                                    <input type="text" id="PinCode" name="PinCode" class="form-control underline-input"
+                                        pattern="[0-9]{6}" maxlength="6" required>
                                 </div>
                             </div>
                         </div>
                         <div class="row mt-3">
-                            <div class="col-12 d-flex justify-content-center">
+                            <div class="col-12 d-flex justify-content-between">
+                                <button type="button" class="btn btn-outline-warning px-3"
+                                    id="clearFormBtn">Clear</button>
                                 <button type="submit" class="btn btn-warning px-3">Submit</button>
                             </div>
                         </div>
                     </form>
                 </div>
-                <div class="contact-info mt-4">
-                    <p>Phone : 
-                        <a href="tel:+918903854444" class="link">+91 89038 54444</a>, 
+                <div class="contact-info mt-4 text-center">
+                    <p>Phone :
+                        <a href="tel:+918903854444" class="link">+91 89038 54444</a>,
                         <a href="tel:+918903864444" class="link">+91 89038 64444</a>
                     </p>
-                    <p>Email : <a href="mailto:admission@srimaniyainstitute.in" class="link">admission@srimaniyainstitute.in</a></p>
-                    <p>Website : <a href="http://www.srimaniyainstitute.in" target="_blank" class="link">www.srimaniyainstitute.in</a></p>
+                    <div>Email : <a href="mailto:admission@srimaniyainstitute.in"
+                            class="link">admission@srimaniyainstitute.in | </a>Website : <a
+                            href="http://www.srimaniyainstitute.in" target="_blank"
+                            class="link">www.srimaniyainstitute.in</a></p>
+                    </div>
+
                     <p>Address : No: 6/66-D1, Government Hospital Road, Kanyakumari, Tamil Nadu – 629702.</p>
                 </div>
             </div>
