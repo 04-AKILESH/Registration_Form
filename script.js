@@ -799,16 +799,6 @@ document.querySelector("form").addEventListener("submit", function (e) {
   const District = form.District.value;
   const PinCode = form.PinCode.value;
 
-  console.log("StudentName:", StudentName);
-  console.log("ParentName:", ParentName);
-  console.log("StudentPhone:", StudentPhone);
-  console.log("ParentPhone:", ParentPhone);
-  console.log("Address:", Address);
-  console.log("City:", City);
-  console.log("State:", State);
-  console.log("District:", District);
-  console.log("PinCode:", PinCode);
-
   fetch(
     "https://script.google.com/macros/s/AKfycbxK4cqwi1vrMQYOOFUZ-ZIxiPkUSiPW-d8VE3NuoH8Kh2P-Y_RVnB8he0yC7mngfcj_/exec",
     {
@@ -829,12 +819,37 @@ document.querySelector("form").addEventListener("submit", function (e) {
     }
   )
     .then(() => {
-      alert("Form submitted successfully!");
+      const isMobile = window.innerWidth <= 600;
+      Swal.fire({
+        toast: true,
+        position: isMobile ? 'top' : 'top-end',
+        icon: 'success',
+        title: 'Form submitted successfully!',
+        showConfirmButton: false,
+        timer: 2500,
+        timerProgressBar: true,
+        customClass: {
+          popup: 'small-toast'
+        }
+      });
       form.reset();
     })
     .catch((err) => {
       console.error("Error:", err);
-      alert("Submission failed. Check console for details.");
+      const isMobile = window.innerWidth <= 600;
+      Swal.fire({
+        toast: true,
+        position: isMobile ? 'top' : 'top-end',
+        icon: 'error',
+        title: 'Submission Failed',
+        text: 'Submission failed. Check console for details.',
+        showConfirmButton: false,
+        timer: 2500,
+        timerProgressBar: true,
+        customClass: {
+          popup: 'small-toast'
+        }
+      });
     })
     .finally(() => {
       submitBtn.disabled = false;
