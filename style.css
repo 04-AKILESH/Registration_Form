@@ -101,3 +101,35 @@ body {
 .contact-info p {
   margin-bottom: 4px;
 }
+
+@media (max-width: 576px) {
+  .contact-info {
+    font-size: 14px;
+  }
+}
+
+select#State option:not([disabled]) {
+  color: #fff;
+}
+
+select#State:invalid,
+select#State option[disabled][selected] {
+  color: #878686 !important;
+}
+
+select#State:valid {
+  color: #fff;
+}
+
+select#District option:not([disabled]) {
+  color: #fff;
+}
+
+select#District:invalid,
+select#District option[disabled][selected] {
+  color: #878686 !important;
+}
+
+select#District:valid {
+  color: #fff;
+}
